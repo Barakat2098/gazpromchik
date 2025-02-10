@@ -1,0 +1,280 @@
+/* Общие стили */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+    background-color: #eef2f7;
+    margin: 0;
+    padding: 0;
+}
+
+/* Шапка */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3.125rem; /* 50px */
+    background: rgba(0, 123, 255, 0.8);
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+    transition: 0.3s;
+    margin-bottom: 3.125rem; /* 50px */
+}
+
+.logo {
+    font-size: 1.5rem; /* 24px */
+    font-weight: bold;
+    color: white;
+}
+
+/* Навигация */
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 1.875rem; /* 30px */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem; /* 16px */
+    padding: 0.625rem 0.9375rem; /* 10px 15px */
+    border-radius: 0.3125rem; /* 5px */
+    transition: background 0.3s;
+}
+
+nav ul a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Кнопки */
+.btn, .btn-outline {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.btn {
+    background: white;
+    color: #007bff;
+}
+
+.btn:hover {
+    background: #0056b3;
+    color: white;
+}
+
+.btn-outline {
+    border: 2px solid white;
+    color: white;
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: #007bff;
+}
+
+/* Контейнер */
+.container {
+    max-width: 1200px;
+    margin: 2.5rem auto; /* 40px */
+    padding: 0 1.25rem; /* 20px */
+}
+
+/* Слайдер */
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 25rem; /* 400px */
+    overflow: hidden;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    transition: transform 0.5s ease;
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item img:hover {
+    transform: scale(1.05);
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 1.25rem; /* 20px */
+    left: 1.25rem; /* 20px */
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-caption h5 {
+    font-size: 1.5rem; /* 24px */
+    font-weight: bold;
+}
+
+.carousel-caption p {
+    font-size: 1rem; /* 16px */
+    line-height: 1.4;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: #003b80;
+    border-radius: 50%;
+    padding: 0.625rem; /* 10px */
+}
+
+/* Раздел новостей */
+.news-section {
+    margin-bottom: 3rem; /* Добавлен больший отступ для разделов */
+}
+
+/* Заголовок раздела */
+.news-section h3 {
+    font-size: 2.2rem; /* 35px */
+    margin-bottom: 2rem; /* 32px */
+    color: #003b80; /* Темно-синий цвет */
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Сетка новостей */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem; /* Увеличены отступы */
+}
+
+/* Карточки новостей */
+.news-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.news-item:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Изображения новостей */
+.news-img {
+    width: 100%;
+    height: 200px; /* Фиксированная высота */
+    overflow: hidden;
+}
+
+.news-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Заголовок новости */
+.news-content {
+    padding: 1.5rem; /* Увеличен отступ вокруг текста */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Заголовок */
+.news-item h4 {
+    font-size: 1.5rem; /* 24px */
+    color: #003b80; /* Темно-синий */
+    font-weight: 600;
+    margin-bottom: 1rem; /* отступ снизу */
+    text-transform: capitalize;
+}
+
+/* Описание новости */
+.news-item p {
+    font-size: 1rem; /* 16px */
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem; /* отступ снизу */
+    text-align: justify;
+}
+
+/* Добавление иконки "Читать далее" */
+.news-item::after {
+    content: "→ Читать далее";
+    font-size: 1.2rem;
+    color: #007bff;
+    font-weight: 600;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: color 0.3s ease;
+}
+
+.news-item:hover::after {
+    color: #0056b3;
+}
+
+
+
+/* Подвал */
+footer {
+    background-color: #003b80; /* Темно-синий фон */
+    color: white;
+    padding: 2.5rem 0; /* Увеличены отступы */
+    text-align: center;
+    border-top-left-radius: 1.25rem;
+    border-top-right-radius: 1.25rem;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1); /* Легкая тень сверху */
+}
+
+/* Контейнер футера */
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem; /* Отступы для мобильных */
+}
+
+/* Текст в футере */
+footer p {
+    font-size: 1rem; /* 16px */
+    font-weight: 400;
+    margin-bottom: 1rem; /* Отступ снизу */
+    color: #e0e0e0; /* Светло-серый для текста */
+}
+
+/* Ссылки в футере */
+.footer-links {
+    font-size: 0.9rem; /* 14px */
+    color: #e0e0e0;
+}
+
+.footer-links a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff; /* Белый цвет при наведении */
+}

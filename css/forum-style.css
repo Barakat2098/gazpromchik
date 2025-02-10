@@ -1,0 +1,104 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f8ff;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: rgba(0, 123, 255, 0.8);
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: 0.3s;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+nav ul a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+nav ul a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    transition: 0.3s;
+}
+.btn-primary:hover { background: #0056b3; }
+.btn-outline {
+    border: 2px solid white;
+    color: white;
+    background: transparent;
+}
+.btn-outline:hover {
+    background: white;
+    color: #007bff;
+}
+
+
+
+    .container {
+        max-width: 900px;
+        margin: 10px auto 20px;
+        padding: 20px;
+    }
+
+
+.idea-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.idea-card, .vote-section {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.idea-card:hover {
+    transform: scale(1.02);
+}
+
+.idea-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.like-btn {
+    cursor: pointer;
+    color: #007bff;
+    font-size: 18px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+}
