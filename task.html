@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Управление задачами</title>
+    <title>Управление задачами - Газпром</title>
     <link rel="stylesheet" href="css/task.css">
 </head>
 <body>
@@ -27,58 +27,85 @@
 
     <div class="container">
         <h2>Управление задачами</h2>
+
+        <!-- Блок с задачей -->
         <div class="task-block">
-            <h3>Задача 1</h3>
-            <p>Описание задачи...</p>
+            <h3>Задача 1: Провести техосмотр оборудования</h3>
+            <p><strong>Описание:</strong> Техосмотр оборудования в секторе №3 для выявления неисправностей и выполнения диагностики.</p>
+            <p><strong>Крайний срок:</strong> 05.02.2025</p>
+            <p><strong>Приоритет:</strong> Высокий</p>
+            <p><strong>Статус:</strong> В процессе</p>
             <button class="btn-tasks" onclick="openModal('completeModal')">Выполнил</button>
             <button class="btn-tasks" onclick="openModal('notCompleteModal')">Не выполнил</button>
             <button class="btn-tasks" onclick="openModal('rescheduleModal')">Перенести задачу</button>
             <button class="btn-tasks" onclick="openModal('cancelModal')">Отменить задачу</button>
         </div>
 
-        <!-- More tasks -->
-    </div>
-
-    <!-- Модальное окно для выполнения задачи -->
-    <div id="completeModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('completeModal')">&times;</span>
-            <h2>Выполнение задачи</h2>
-            <textarea placeholder="Опишите, как вы выполнили задачу..."></textarea>
-            <input type="file" accept="image/*">
-            <button class="btn-tasks">Отправить</button>
+        <!-- Блок с задачей -->
+        <div class="task-block">
+            <h3>Задача 2: Подготовить отчет по технике безопасности</h3>
+            <p><strong>Описание:</strong> Составить и отправить отчет по технике безопасности на основе проведенных проверок.</p>
+            <p><strong>Крайний срок:</strong> 10.02.2025</p>
+            <p><strong>Приоритет:</strong> Средний</p>
+            <p><strong>Статус:</strong> Не начато</p>
+            <button class="btn-tasks" onclick="openModal('completeModal')">Выполнил</button>
+            <button class="btn-tasks" onclick="openModal('notCompleteModal')">Не выполнил</button>
+            <button class="btn-tasks" onclick="openModal('rescheduleModal')">Перенести задачу</button>
+            <button class="btn-tasks" onclick="openModal('cancelModal')">Отменить задачу</button>
         </div>
-    </div>
 
-    <!-- Модальное окно для объяснения, почему не выполнено -->
-    <div id="notCompleteModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('notCompleteModal')">&times;</span>
-            <h2>Почему не выполнил задачу?</h2>
-            <textarea placeholder="Объясните, почему вы не смогли выполнить задачу..."></textarea>
-            <button class="btn-tasks">Отправить</button>
+        <!-- Добавим больше задач для примера -->
+        <div class="task-block">
+            <h3>Задача 3: Обновление ПО на станциях</h3>
+            <p><strong>Описание:</strong> Обновить программное обеспечение на контрольных станциях в секторе №1.</p>
+            <p><strong>Крайний срок:</strong> 15.02.2025</p>
+            <p><strong>Приоритет:</strong> Низкий</p>
+            <p><strong>Статус:</strong> Ожидается</p>
+            <button class="btn-tasks" onclick="openModal('completeModal')">Выполнил</button>
+            <button class="btn-tasks" onclick="openModal('notCompleteModal')">Не выполнил</button>
+            <button class="btn-tasks" onclick="openModal('rescheduleModal')">Перенести задачу</button>
+            <button class="btn-tasks" onclick="openModal('cancelModal')">Отменить задачу</button>
         </div>
-    </div>
 
-    <!-- Модальное окно для переноса задачи -->
-    <div id="rescheduleModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('rescheduleModal')">&times;</span>
-            <h2>Перенести задачу</h2>
-            <label for="newDate">Выберите новую дату:</label>
-            <input type="date" id="newDate">
-            <button class="btn-tasks">Перенести</button>
+        <!-- Модальные окна -->
+        <div id="completeModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('completeModal')">&times;</span>
+                <h2>Выполнение задачи</h2>
+                <textarea placeholder="Опишите, как вы выполнили задачу..."></textarea>
+                <input type="file" accept="image/*">
+                <button class="btn-tasks">Отправить</button>
+            </div>
         </div>
-    </div>
 
-    <!-- Модальное окно для отмены задачи -->
-    <div id="cancelModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('cancelModal')">&times;</span>
-            <h2>Отменить задачу</h2>
-            <textarea placeholder="Объясните, почему вы отменяете задачу..."></textarea>
-            <button class="btn-tasks">Отправить</button>
+        <div id="notCompleteModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('notCompleteModal')">&times;</span>
+                <h2>Почему не выполнил задачу?</h2>
+                <textarea placeholder="Объясните, почему вы не смогли выполнить задачу..."></textarea>
+                <button class="btn-tasks">Отправить</button>
+            </div>
         </div>
+
+        <div id="rescheduleModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('rescheduleModal')">&times;</span>
+                <h2>Перенести задачу</h2>
+                <label for="newDate">Выберите новую дату:</label>
+                <input type="date" id="newDate">
+                <button class="btn-tasks">Перенести</button>
+            </div>
+        </div>
+
+        <div id="cancelModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('cancelModal')">&times;</span>
+                <h2>Отменить задачу</h2>
+                <textarea placeholder="Объясните, почему вы отменяете задачу..."></textarea>
+                <button class="btn-tasks">Отправить</button>
+            </div>
+        </div>
+
     </div>
 
     <footer>
@@ -86,13 +113,38 @@
     </footer>
 
     <script>
+        // Открытие модального окна
         function openModal(modalId) {
-            document.getElementById(modalId).style.display = 'block';
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = "flex"; // Делаем модалку видимой
+                setTimeout(() => {
+                    modal.classList.add("active");
+                }, 10);
+            }
         }
 
+        // Закрытие модального окна
         function closeModal(modalId) {
-            document.getElementById(modalId).style.display = 'none';
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove("active");
+                setTimeout(() => {
+                    modal.style.display = "none"; // Скрываем после анимации
+                }, 300);
+            }
         }
+
+        // Закрытие модального окна при клике вне его
+        window.addEventListener("click", function (event) {
+            document.querySelectorAll(".modal").forEach((modal) => {
+                if (event.target === modal) {
+                    closeModal(modal.id);
+                }
+            });
+        });
+
     </script>
+    
 </body>
 </html>
