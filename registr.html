@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="css/registr-style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Газпром</div>
+        <nav>
+            <ul>
+                <a href="index.html">Главная</a>
+                <a href="news.html">Новости</a>
+                <a href="forum.html">Форум</a>
+                <a href="stol.html">Столовая</a>
+                <a href="zdanie.html">Здания</a>
+                <a href="profile.html">Мой кабинет</a>
+                <a href="task.html">Задачи</a>
+                <a href="login.html" class="btn">Вход</a>
+                <a href="registr.html" class="btn btn-outline">Регистрация</a>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <h2>Регистрация</h2>
+        <form class="registration-form">
+            <label for="name">ФИО</label>
+            <input type="text" id="name" placeholder="Иван Иванов" required>
+            
+            <label for="position">Должность</label>
+            <input type="text" id="position" placeholder="Техник 40-го разряда" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="ivanov@gazprom.ru" required>
+            
+            <label for="phone">Телефон</label>
+            <input type="tel" id="phone" placeholder="+7 999 999 9999" required>
+            
+            <button type="submit" class="btn">Зарегистрироваться</button>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2025 Газпром. Все права защищены.</p>
+    </footer>
+</body>
+</html>

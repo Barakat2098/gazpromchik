@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню столовой</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/stol.css">
+</head>
+<body>
+    
+    <header>
+        <div class="logo">Газпром</div>
+        <nav>
+            <ul>
+                <a href="index.html">Главная</a>
+                <a href="news.html">Новости</a>
+                <a href="forum.html">Форум</a>
+                <a href="stol.html">Столовая</a>
+                <a href="zdanie.html">Здания</a>
+                <a href="profile.html">Мой кабинет</a>
+                <a href="task.html">Задачи</a>
+                <a href="login.html" class="btn">Вход</a>
+                <a href="registr.html" class="btn btn-outline">Регистрация</a>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2 class="text-center">Меню на сегодня</h2>
+
+        <div class="menu-card">
+            <h4>🍳 Завтрак</h4>
+            <ul>
+                <li>Овсяная каша на молоке</li>
+                <li>Яичница с беконом</li>
+                <li>Тост с джемом</li>
+                <li>Чай / Кофе</li>
+            </ul>
+        </div>
+
+        <div class="menu-card">
+            <h4>🍲 Обед</h4>
+            <ul>
+                <li>Борщ со сметаной</li>
+                <li>Куриное филе с гарниром</li>
+                <li>Салат "Оливье"</li>
+                <li>Компот</li>
+            </ul>
+        </div>
+
+        <h3 class="text-center mt-4">Оставить отзыв</h3>
+        <div class="menu-card">
+            <textarea class="form-control" rows="3" placeholder="Оставьте ваш отзыв о меню..."></textarea>
+            <button class="btn btn-primary w-100 mt-2">Отправить</button>
+        </div>
+
+        <h3 class="text-center mt-4">Предложить блюдо</h3>
+        <div class="menu-card">
+            <input type="text" class="form-control" placeholder="Название блюда">
+            <textarea class="form-control mt-2" rows="2" placeholder="Описание блюда"></textarea>
+            <button class="btn btn-success w-100 mt-2">Предложить</button>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Газпром | Контакты: support@gazprom.com</p>
+    </div>
+</body>
+</html>

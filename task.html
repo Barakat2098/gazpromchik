@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление задачами</title>
+    <link rel="stylesheet" href="css/task.css">
+</head>
+<body>
+    
+    <header>
+        <div class="logo">Газпром</div>
+        <nav>
+            <ul>
+                <a href="index.html">Главная</a>
+                <a href="news.html">Новости</a>
+                <a href="forum.html">Форум</a>
+                <a href="stol.html">Столовая</a>
+                <a href="zdanie.html">Здания</a>
+                <a href="profile.html">Мой кабинет</a>
+                <a href="task.html">Задачи</a>
+                <a href="login.html" class="btn">Вход</a>
+                <a href="registr.html" class="btn btn-outline">Регистрация</a>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Управление задачами</h2>
+        <div class="task-block">
+            <h3>Задача 1</h3>
+            <p>Описание задачи...</p>
+            <button class="btn-tasks" onclick="openModal('completeModal')">Выполнил</button>
+            <button class="btn-tasks" onclick="openModal('notCompleteModal')">Не выполнил</button>
+            <button class="btn-tasks" onclick="openModal('rescheduleModal')">Перенести задачу</button>
+            <button class="btn-tasks" onclick="openModal('cancelModal')">Отменить задачу</button>
+        </div>
+
+        <!-- More tasks -->
+    </div>
+
+    <!-- Модальное окно для выполнения задачи -->
+    <div id="completeModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('completeModal')">&times;</span>
+            <h2>Выполнение задачи</h2>
+            <textarea placeholder="Опишите, как вы выполнили задачу..."></textarea>
+            <input type="file" accept="image/*">
+            <button class="btn-tasks">Отправить</button>
+        </div>
+    </div>
+
+    <!-- Модальное окно для объяснения, почему не выполнено -->
+    <div id="notCompleteModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('notCompleteModal')">&times;</span>
+            <h2>Почему не выполнил задачу?</h2>
+            <textarea placeholder="Объясните, почему вы не смогли выполнить задачу..."></textarea>
+            <button class="btn-tasks">Отправить</button>
+        </div>
+    </div>
+
+    <!-- Модальное окно для переноса задачи -->
+    <div id="rescheduleModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('rescheduleModal')">&times;</span>
+            <h2>Перенести задачу</h2>
+            <label for="newDate">Выберите новую дату:</label>
+            <input type="date" id="newDate">
+            <button class="btn-tasks">Перенести</button>
+        </div>
+    </div>
+
+    <!-- Модальное окно для отмены задачи -->
+    <div id="cancelModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('cancelModal')">&times;</span>
+            <h2>Отменить задачу</h2>
+            <textarea placeholder="Объясните, почему вы отменяете задачу..."></textarea>
+            <button class="btn-tasks">Отправить</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>Газпром © 2025. Все права защищены.</p>
+    </footer>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+    </script>
+</body>
+</html>

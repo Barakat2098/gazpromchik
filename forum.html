@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форум идей сотрудников</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/forum-style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Газпром</div>
+        <nav>
+            <ul>
+                <a href="index.html">Главная</a>
+                <a href="news.html">Новости</a>
+                <a href="forum.html">Форум</a>
+                <a href="stol.html">Столовая</a>
+                <a href="zdanie.html">Здания</a>
+                <a href="profile.html">Мой кабинет</a>
+                <a href="task.html">Задачи</a>
+                <a href="login.html" class="btn btn-light">Вход</a>
+                <a href="registr.html" class="btn btn-outline">Регистрация</a>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h2 class="text-center">Идеи сотрудников и инновации</h2>
+        
+        <div class="idea-card">
+            <h4>Оптимизация энергозатрат</h4>
+            <p>Предложение внедрения интеллектуальных датчиков энергопотребления для снижения затрат и повышения эффективности работы...</p>
+            <div class="idea-actions">
+                <span class="like-btn"><i class="fas fa-thumbs-up"></i> 24</span>
+                <span class="dislike-btn"><i class="fas fa-thumbs-down"></i> 5</span>
+                <span>Автор: Иван Петров</span>
+                <button class="btn btn-success">Поддержать</button>
+                <button class="btn btn-danger">Против</button>
+            </div>
+        </div>
+        
+        <div class="idea-card">
+            <h4>Автоматизация документооборота</h4>
+            <p>Разработка системы для автоматического формирования и проверки отчетов, что значительно ускорит обработку документации...</p>
+            <div class="idea-actions">
+                <span class="like-btn"><i class="fas fa-thumbs-up"></i> 19</span>
+                <span class="dislike-btn"><i class="fas fa-thumbs-down"></i> 3</span>
+                <span>Автор: Анна Смирнова</span>
+                <button class="btn btn-success">Поддержать</button>
+                <button class="btn btn-danger">Против</button>
+            </div>
+        </div>
+        <div class="idea-card">
+            <h4>Разработка мобильного приложения для сотрудников</h4>
+            <p>Создание приложения, которое будет предоставлять доступ к внутренним ресурсам компании, улучшая коммуникацию и ускоряя выполнение задач...</p>
+            <div class="idea-actions">
+                <span class="like-btn"><i class="fas fa-thumbs-up"></i> 32</span>
+                <span class="dislike-btn"><i class="fas fa-thumbs-down"></i> 7</span>
+                <span>Автор: Сергей Иванов</span>
+                <button class="btn btn-success">Поддержать</button>
+                <button class="btn btn-danger">Против</button>
+            </div>
+        </div>
+        
+        <div class="idea-card">
+            <h4>Использование машинного обучения для прогнозирования потребностей в ресурсах</h4>
+            <p>Внедрение системы машинного обучения для предсказания потребностей в ресурсах, что позволит оптимизировать процесс планирования...</p>
+            <div class="idea-actions">
+                <span class="like-btn"><i class="fas fa-thumbs-up"></i> 27</span>
+                <span class="dislike-btn"><i class="fas fa-thumbs-down"></i> 4</span>
+                <span>Автор: Виктория Лебедева</span>
+                <button class="btn btn-success">Поддержать</button>
+                <button class="btn btn-danger">Против</button>
+            </div>
+        </div>
+            
+
+        <h3 class="text-center mt-4">Топ идеи</h3>
+        <div class="ranking-section">
+            <p><strong>1. Оптимизация энергозатрат (24 лайка)</strong></p>
+            <p><strong>2. Автоматизация документооборота (19 лайков)</strong></p>
+        </div>
+
+        <h3 class="text-center mt-4">Предложите свою идею</h3>
+        <div class="vote-section">
+            <input type="text" class="form-control" placeholder="ФИО">
+            <input type="text" class="form-control mt-2" placeholder="Название идеи">
+            <textarea class="form-control mt-2" rows="3" placeholder="Опишите вашу идею"></textarea>
+            <label><input type="checkbox"> Анонимно</label>
+            <button class="btn btn-primary w-100 mt-2">Отправить идею</button>
+        </div>
+    </div>
+</body>
+</html>
